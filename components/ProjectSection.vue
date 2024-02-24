@@ -54,7 +54,6 @@
   </section>
 </template>
 <script setup>
-import { ref, onMounted, markRaw } from 'vue'
 import NextRaw from '~/icons/techs/Next.vue'
 import AstroRaw from '~/icons/techs/Astro.vue'
 import ReactRaw from '~/icons/techs/React.vue'
