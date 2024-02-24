@@ -5,5 +5,6 @@
     <HeroSection />
     <ProjectSection />
     <PinnedArticles />
+    <LatestArticles />
   </main>
 </template>

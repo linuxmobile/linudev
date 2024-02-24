@@ -17,6 +17,7 @@
   "devDependencies": {
     "@nuxt/content": "latest",
     "@nuxtjs/fontaine": "latest",
+    "@types/timeago": "^1.6.3",
     "@unocss/nuxt": "latest",
     "timeago.js": "^4.0.2"
   }

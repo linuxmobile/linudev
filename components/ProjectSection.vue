@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <section class="grid gap-y-4">
     <h3 class="text-5xl font-bold font-display">Proyectos Seleccionados</h3>
     <div v-if="isLoading">
       Cargando proyectos...
@@ -34,7 +34,7 @@
         <footer class="flex items-end justify-between w-full">
           <div v-if="visibleProjects.length > 0" class="flex gap-x-1">
             <div v-if="project.tags" v-for="tag in project.tags" :key="tag.name" class="pointer-events-none flex items-center rounded-md px-2 py-1 text-xs gap-x-1 font-medium" :class="tag.class">
-              <component :is="tag.icon" class="h-5 w-5 inline-block"/>
+              <component :is="tag.icon" class="size-5 inline-block"/>
               <span>{{ tag.name }}</span>
             </div>
           </div>
@@ -256,8 +256,8 @@ async function fetchProjectsInfo() {
   const projectFetchPromises = PROJECTS.map(project =>
     $fetch(`/api/github/${encodeURIComponent(project.repo)}`).then(projectData => ({
       ...project,
-      stars: projectData.stargazers_count,
-      forks: projectData.forks_count,
+      stars: projectData.stars, 
+      forks: projectData.forks,
       html_url: projectData.html_url,
       created_at: projectData.created_at,
       homepage: projectData.homepage,
