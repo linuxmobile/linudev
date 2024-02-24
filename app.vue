@@ -39,6 +39,7 @@ const links = [{
     </header>
   </div>
   <NuxtPage />
+  <FooterSection />
 </template>
 <style>
 @font-face {
