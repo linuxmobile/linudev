@@ -1,7 +1,7 @@
 <script setup>
 useHead({
   bodyAttrs: {
-    class: 'bg-black text-white'
+    class: 'bg-black text-white font-sans'
   }
 })
 
@@ -15,6 +15,45 @@ useSeoMeta({
   twitterCard: 'summary_large_image'
 })
 
+const links = [{
+  label: 'Inicio',
+  to: '/'
+}, {
+  label: 'Blog',
+  to: '#'
+}, {
+  label: 'Sobre Mi',
+  to: '#'
+}]
+
 </script>
 <template>
+  <div>
+    <Noise />
+    <header class="fixed w-full py-6 text-lg">
+      <nav class="flex-center gap-x-12">
+        <NuxtLink v-for="link in links" :key="link.to" :to="link.to">
+          {{ link.label }}
+        </NuxtLink>
+      </nav>
+    </header>
+  </div>
+  <NuxtPage />
 </template>
+<style>
+@font-face {
+  font-family: 'Clash Display';
+  src: url('/ClashDisplay-Variable.woff2') format('woff2');
+  font-weight: 200 900;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'General Sans';
+  src: url('/GeneralSans-Variable.woff2') format('woff2');
+  font-weight: 200 900;
+  font-display: swap;
+  font-style: normal;
+}
+</style>

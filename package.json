@@ -10,12 +10,14 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
-    "nuxt": "^3.10.2",
+    "nuxt": "^3.10.3",
     "vue": "^3.4.19",
     "vue-router": "^4.2.5"
   },
   "devDependencies": {
     "@nuxt/content": "latest",
-    "@unocss/nuxt": "latest"
+    "@nuxtjs/fontaine": "latest",
+    "@unocss/nuxt": "latest",
+    "timeago.js": "^4.0.2"
   }
 }
