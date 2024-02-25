@@ -1,10 +1,10 @@
 <template>
   <section class="grid gap-y-4">
-    <h3 class="text-5xl font-bold font-display">Proyectos Seleccionados</h3>
+    <h3 class="text-5xl font-bold font-display max-w-xs lg:text-8xl">Proyectos Seleccionados</h3>
     <div v-if="isLoading">
       Cargando proyectos...
     </div>
-    <div class="grid grid-cols-1 gap-y-2">
+    <div class="grid grid-cols-1 gap-3 lg:grid-cols-2">
       <article
         v-if="visibleProjects.length > 0" 
         v-for="project in visibleProjects" 
@@ -12,8 +12,8 @@
         class="flex flex-col items-start justify-between bg-white/5 border border-white/10 px-4 py-3 rounded-lg gap-y-2"
       >
         <header class="w-full flex items-center justify-between">
-          <h2 class="font-black text-lg font-display" v-if="project.title">{{ project.title }}</h2>
-          <h2 class="font-black text-lg font-display" v-else>{{project.repo}}</h2>
+          <h2 class="font-black text-lg font-display lg:text-2xl" v-if="project.title">{{ project.title }}</h2>
+          <h2 class="font-black text-lg font-display lg:text-2xl" v-else>{{project.repo}}</h2>
           <div class="flex items-center justify-center gap-x-1">
             <NuxtLink
               v-if="project.showSite"
@@ -30,7 +30,7 @@
             ><Github class="size-5"/></NuxtLink>
           </div>
         </header>
-        <p class="max-w-80">{{ project.description }}</p>
+        <p class="max-w-80 text-gray-300 lg:text-lg lg:max-w-lg">{{ project.description }}</p>
         <footer class="flex items-end justify-between w-full">
           <div v-if="visibleProjects.length > 0" class="flex gap-x-1">
             <div v-if="project.tags" v-for="tag in project.tags" :key="tag.name" class="pointer-events-none flex items-center rounded-md px-2 py-1 text-xs gap-x-1 font-medium" :class="tag.class">
@@ -46,7 +46,9 @@
       </article>
       <div 
         v-if="projectInfos.length > 0"
-        class="flex items-center justify-between gap-x-4 [&>button]:rounded-md [&>button]:bg-white/5 [&>button]:px-3 [&>button]:py-1 [&>button]:w-full">
+        class="flex items-center justify-between gap-x-4 w-full lg:col-start-2
+        [&>button]:rounded-md [&>button]:bg-white/5 [&>button]:px-3 [&>button]:py-1 [&>button]:w-full"
+      >
         <button :class="{'opacity-50': currentPage === 0}" @click="prevPage" :disabled="currentPage === 0">Anterior</button>
         <button :class="{'opacity-50': (currentPage + 1) * pageSize >= projectInfos.length}" @click="nextPage" :disabled="(currentPage + 1) * pageSize >= projectInfos.length">Siguiente</button>
       </div>

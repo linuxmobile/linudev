@@ -31,7 +31,7 @@ const links = [{
   <div>
     <Noise />
     <header class="fixed w-full py-6 text-lg bg-gradient-to-b from-black via-black/60 to-transparent">
-      <nav class="flex-center gap-x-12">
+      <nav class="w-full flex-center gap-x-12 md:justify-end md:px-6">
         <NuxtLink v-for="link in links" :key="link.to" :to="link.to">
           {{ link.label }}
         </NuxtLink>

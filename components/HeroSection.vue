@@ -24,14 +24,14 @@ const SOCIAL = [
 
 </script>
 <template>
-  <section class="grid grid-cols-1 pt-34 gap-y-3">
-    <h1 class="text-6xl font-display font-black max-w-xs">Creative Developer</h1>
+  <section class="grid grid-cols-1 pt-34 gap-y-3 lg:grid-cols-2">
+    <h1 class="text-6xl font-display font-black max-w-xs lg:col-span-2 lg:text-8xl">Creative Developer</h1>
     <figure>
       <img src="/baires.webp" alt="Imagen de Buenos Aires, Obelisco" class="rounded-md object-cover w-full h-54 aspect-video"/>
       <figcaption class="text-sm font-light mt-1">Buenos Aires</figcaption>
     </figure>
-    <div class="grid grid-cols-1 place-items-end gap-y-1">
-      <h2 class="text-6xl font-display font-black">LinuDev</h2>
+    <div class="grid grid-cols-1 place-items-end gap-y-1 lg:content-end lg:pb-6">
+      <h2 class="text-6xl font-display font-black lg:text-8xl">LinuDev</h2>
       <div class="grid grid-cols-3 gap-x-3">
         <a
           href="mailto:bdiez19@gmail.com"

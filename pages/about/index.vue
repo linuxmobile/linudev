@@ -40,9 +40,9 @@ const TECHS = {
 </script>
 <template>
   <main class="px-4 pt-34 xl:max-w-7xl mx-auto grid grid-cols-1 gap-y-20">
-    <section class="grid grid-cols-3 gap-x-5">
-      <h1 class="text-3xl font-black font-display">Sobre Mi</h1>
-      <article class="grid gap-y-5 text-pretty col-span-2 [&>p>strong]:text-[#ea9d34] [&>p>strong]:font-semibold">
+    <section class="grid grid-cols-3 gap-x-5 lg:grid-cols-6">
+      <h1 class="text-3xl font-black font-display lg:text-8xl lg:col-span-3">Sobre Mi</h1>
+      <article class="grid gap-y-5 text-pretty col-span-2 [&>p>strong]:text-[#ea9d34] [&>p>strong]:font-semibold lg:text-2xl lg:col-span-3">
         <p>
           Desde mi perspectiva única, veo el mundo del desarrollo web como un vasto lienzo en blanco,
           esperando ser transformado en una obra maestra. <strong>Mi condición de autista no es una limitación,
@@ -61,13 +61,10 @@ const TECHS = {
       <h2 class="uppercase tracking-widest font-light text-2xl font-display">Tecnologías que domino</h2>
       <div v-for="(category, key) in TECHS" :key="key" class="grid gap-y-2">
         <h3 class="uppercase font-semibold">{{ category.name }}</h3>
-        <div class="flex justify-start gap-x-1 gap-y-2 flex-wrap">
-          <component
-            v-for="(IconComponent, index) in category.icons" 
-            :key="index" 
-            :is="IconComponent"
-            class="bg-gradient-to-tr from-astro-blue to-astro-pink text-white rounded-full p-2 aspect-square size-10"
-          />
+        <div class="flex justify-start gap-x-1 gap-y-2 flex-wrap ">
+          <div v-for="(IconComponent, index) in category.icons" :key="index" class="bg-gradient-to-tr from-astro-blue to-astro-pink text-white rounded-full p-2 aspect-square">
+          <component class=" size-6" :is="IconComponent" />
+          </div>
         </div>
       </div>
     </section>

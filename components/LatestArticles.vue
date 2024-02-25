@@ -12,8 +12,8 @@ const { data: latestArticles } = await useAsyncData('latestArticles', () =>
 const { formatTimeAgo } = useFormatTime()
 </script>
 <template>
-  <section class="grid gap-y-4">
-    <h3 class="font-display text-5xl font-black">Últimos Articulos</h3>
+  <section class="grid gap-4 lg:grid-cols-2">
+    <h3 class="font-display text-5xl font-black lg:col-span-2">Últimos Articulos</h3>
     <article v-for="article in latestArticles" :key="article._path" class="rounded-lg bg-white/5 border border-white/10">
       <NuxtLink :to="article._path" class="px-4 py-3 w-full block flex flex-col gap-y-2">
         <h2 class="font-display font-black text-2xl">{{ article.title }}</h2>
@@ -21,6 +21,6 @@ const { formatTimeAgo } = useFormatTime()
         <p class="text-gray-400 text-sm">{{ formatTimeAgo(new Date(article.date)) }}</p>
       </NuxtLink>
     </article>
-    <NuxtLink to="/blog" class="uppercase py-2 bg-gray-600/40 rounded-md text-center">más artículos</NuxtLink>
+    <NuxtLink to="/blog" class="uppercase py-2 bg-gray-600/40 rounded-md text-center lg:col-start-2">más artículos</NuxtLink>
   </section>
 </template>
