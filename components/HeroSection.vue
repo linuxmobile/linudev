@@ -27,7 +27,7 @@ const SOCIAL = [
   <section class="grid grid-cols-1 pt-34 gap-y-3">
     <h1 class="text-6xl font-display font-black max-w-xs">Creative Developer</h1>
     <figure>
-      <img src="/baires.webp" alt="Imagen de Buenos Aires, Obelisco" class="rounded-md object-cover w-full h-64 aspect-video"/>
+      <img src="/baires.webp" alt="Imagen de Buenos Aires, Obelisco" class="rounded-md object-cover w-full h-54 aspect-video"/>
       <figcaption class="text-sm font-light mt-1">Buenos Aires</figcaption>
     </figure>
     <div class="grid grid-cols-1 place-items-end gap-y-1">
