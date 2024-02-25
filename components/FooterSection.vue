@@ -2,7 +2,7 @@
 import LogoWhite from '~/icons/logo/Stroke-White.vue'
 </script>
 <template>
-   <footer class='w-full flex flex-col items-start justify-end min-h-screen pt-10 pb-2 gap-y-3 px-3'>
+   <footer class='w-full flex flex-col items-start justify-end min-h-screen pt-10 pb-2 gap-y-3 px-3 xl:max-w-7xl xl:mx-auto'>
   	<section class="w-full flex flex-col items-start justify-start gap-y-8 py-12 border-t border-gray-500/40">
   		<p class="text-pretty text-lg leading-6 max-w-2xl font-light md:text-xl">Si crees que encajaría bien en tu próximo proyecto, envíame un correo electrónico. Actualmente estoy disponible para trabajar como freelance/contratado.</p>
   		<a href="mailto:bdiez19@gmail.com" class="rounded-full bg-white text-black/90 px-5 py-1 md:text-lg transition-all ease-in-out duration-300 hover:bg-white/70">bdiez19@gmail.com</a>

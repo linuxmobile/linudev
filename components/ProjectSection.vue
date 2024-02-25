@@ -9,7 +9,7 @@
         v-if="visibleProjects.length > 0" 
         v-for="project in visibleProjects" 
         :key="project.repo"
-        class="flex flex-col items-start justify-between bg-white/5 border border-white/10 px-4 py-3 rounded-lg gap-y-2"
+        class="h-56 flex flex-col items-start justify-between bg-white/5 border border-white/10 px-4 py-3 rounded-lg gap-y-2"
       >
         <header class="w-full flex items-center justify-between">
           <h2 class="font-black text-lg font-display lg:text-2xl" v-if="project.title">{{ project.title }}</h2>
@@ -21,13 +21,13 @@
               :aria-label="`${project.title} Site Link`"
               target="_blank"
               class="rounded-full bg-white/10 p-1.5 hover:bg-white/20"
-            ><Link class="size-5"/></NuxtLink>
+            ><Link class="size-5 lg:size-6"/></NuxtLink>
             <NuxtLink
               :to="project.html_url"
               :aria-label="`${project.title} Github Link`"
               target="_blank"
               class="rounded-full bg-white/10 p-1.5 hover:bg-white/20"
-            ><Github class="size-5"/></NuxtLink>
+            ><Github class="size-5 lg:size-6"/></NuxtLink>
           </div>
         </header>
         <p class="max-w-80 text-gray-300 lg:text-lg lg:max-w-lg">{{ project.description }}</p>
