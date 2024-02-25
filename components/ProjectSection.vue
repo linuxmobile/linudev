@@ -100,7 +100,7 @@ const TAGS = {
   TAILWIND: {
     name: 'Tailwind CSS',
     icon: Tailwind,
-    class: 'bg-cyan-800 text-white',
+    class: 'bg-cyan-800/70 text-white',
   },
   ASTRO: {
     name: 'Astro',
@@ -115,12 +115,12 @@ const TAGS = {
   TYPESCRIPT: {
     name: 'Typescript',
     icon: Typescript,
-    class: 'bg-blue-800 text-white',
+    class: 'bg-blue-800/70 text-white',
   },
   NUXT: {
     name: 'Nuxt',
     icon: Nuxt,
-    class: 'bg-green-500 text-white',
+    class: 'bg-green-500/70 text-white',
   },
   NIX: {
     name: 'Nix',
@@ -130,7 +130,7 @@ const TAGS = {
   CSS: {
     name: 'Css',
     icon: Css,
-    class: 'bg-blue-700 text-white',
+    class: 'bg-blue-600/70 text-white',
   },
 }
 
