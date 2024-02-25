@@ -8,7 +8,6 @@ export default defineEventHandler(async (event) => {
 	const repo: string = event.context.params.repo;
 
 	if (cache[repo]) {
-		console.log("Serving from cache:", repo);
 		return cache[repo];
 	}
 
