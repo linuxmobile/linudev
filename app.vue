@@ -23,7 +23,7 @@ const links = [{
   to: '/blog'
 }, {
   label: 'Sobre Mi',
-  to: '#'
+  to: '/about'
 }]
 
 </script>
