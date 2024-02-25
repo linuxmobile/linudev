@@ -1,9 +1,16 @@
+const cache = {};
+
 export default defineEventHandler(async (event) => {
 	const config = useRuntimeConfig();
 	const APIKEY: string = config.apiSecret;
 	const APIURL: string = config.public.apiBase;
 
 	const repo: string = event.context.params.repo;
+
+	if (cache[repo]) {
+		console.log("Serving from cache:", repo);
+		return cache[repo];
+	}
 
 	try {
 		const result = await $fetch(`${APIURL}/${repo}`, {
@@ -18,6 +25,8 @@ export default defineEventHandler(async (event) => {
 			created_at: result.created_at,
 			homepage: result.homepage,
 		};
+
+		cache[repo] = filteredResult;
 
 		return filteredResult;
 	} catch (error) {

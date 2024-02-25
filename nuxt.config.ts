@@ -1,5 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+	ssr: true,
 	runtimeConfig: {
 		apiSecret: process.env.NUXT_API_SECRET,
 		public: {
@@ -32,7 +33,16 @@ export default defineNuxtConfig({
 		},
 	},
 	css: ["@unocss/reset/tailwind.css"],
-	modules: ["@unocss/nuxt", "@nuxt/content", "@nuxtjs/fontaine"],
+	modules: [
+		"@unocss/nuxt",
+		"@nuxt/content",
+		"@nuxtjs/fontaine",
+		"@nuxt/image",
+		"nuxt-delay-hydration",
+	],
+	delayHydration: {
+		mode: "mount",
+	},
 	devtools: {
 		enabled: true,
 		timeline: {

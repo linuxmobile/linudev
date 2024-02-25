@@ -16,9 +16,11 @@
   },
   "devDependencies": {
     "@nuxt/content": "latest",
+    "@nuxt/image": "latest",
     "@nuxtjs/fontaine": "latest",
     "@types/timeago": "^1.6.3",
     "@unocss/nuxt": "latest",
+    "nuxt-delay-hydration": "latest",
     "timeago.js": "^4.0.2"
   }
 }

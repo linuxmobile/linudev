@@ -5,8 +5,6 @@ tags: Git
 date: 2022-08-16
 ---
 
-👉 Nota: [SSH](/ssh/). 👉 Nota: [Git](/git/).
-
 ## Clonar con el Token de Acceso Personal (PAT)
 
 Vamos a [este link](https://github.com/settings/tokens) y generamos un _token_
