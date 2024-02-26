@@ -28,6 +28,7 @@ const links = [{
 
 </script>
 <template>
+  <NuxtLoadingIndicator />
   <div>
     <Noise />
     <header class="fixed w-full py-6 text-lg bg-gradient-to-b from-black via-black/60 to-transparent">
