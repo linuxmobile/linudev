@@ -62,11 +62,14 @@ const TECHS = {
       <div v-for="(category, key) in TECHS" :key="key" class="grid gap-y-2">
         <h3 class="uppercase font-semibold">{{ category.name }}</h3>
         <div class="flex justify-start gap-x-1 gap-y-2 flex-wrap ">
-          <div v-for="(IconComponent, index) in category.icons" :key="index" class="bg-gradient-to-tr from-astro-blue to-astro-pink text-white rounded-full p-2 aspect-square">
+          <div v-for="(IconComponent, index) in category.icons" :key="index" class="bg-gradient-to-tl from-astro-blue to-astro-pink text-white rounded-full p-2 aspect-square">
           <component class=" size-6" :is="IconComponent" />
           </div>
         </div>
       </div>
+    </section>
+    <section>
+      <GithubGraph />
     </section>
   </main>
 </template>
