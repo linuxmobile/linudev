@@ -65,6 +65,7 @@ export default defineConfig({
 			"gradient-orange": "linear-gradient(90deg, #F8E42E 0%, #FF7D54 100%)",
 		},
 	},
+	safelist: "col-span-4 col-span-5".split(" "),
 	shortcuts: {
 		"flex-center": "flex items-center justify-center",
 	},

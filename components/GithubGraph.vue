@@ -10,7 +10,7 @@
       <p>{{ currentYear }}: {{ data.totalContributions }} Contributions</p>
     </div>
     <ul class="grid grid-cols-[repeat(53,13.1333px)] gap-1 justify-items-start">
-      <li v-for="month in months" :key="month.name" :class="`col-span-${month.weeks}`" :style="{ 'grid-column-start': month.start }">{{ month.name }}</li>
+      <li v-for="month in months" :key="month.name" :class="`col-span-${month.weeks}`">{{ month.name }}</li>
     </ul>
     <ul class="grid auto-cols-fr grid-flow-col grid-rows-7 gap-1 max-w-max">
       <li class="bg-transparent"></li>
