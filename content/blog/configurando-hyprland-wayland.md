@@ -38,8 +38,3 @@ que figuran como dependendencias del mismo._
 ```shell
 paru -S hyprland-git waybar-hyprland-git
 ```
-
-<Alert AlertType='warning'>
-	Alerta: Como seguramente ya lo saben, también deberían tener configurada una terminal. En mi caso
-	yo prefiero **Wezterm**
-</Alert>

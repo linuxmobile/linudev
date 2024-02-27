@@ -1,18 +1,47 @@
 <script setup>
+const title = ref('LinuDev - Un blog sobre programación para novatos')
+const description = ref('Un blog sobre programación para novatos, javascript, react, rust, bash, y sobre todo linux.')
+
+defineOgImageComponent(
+  'BlogPost',
+  {
+    title: title,
+    description: description,
+  }
+)
+
+const faviconHref = ref('/logo/stroke-black.svg'); // Valor predeterminado
+
+onMounted(() => {
+  const updateFavicon = () => {
+    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      faviconHref.value = '/logo/stroke-white.svg';
+    } else {
+      faviconHref.value = '/logo/stroke-black.svg';
+    }
+  };
+
+  updateFavicon();
+  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', updateFavicon);
+});
+
 useHead({
   bodyAttrs: {
     class: 'bg-black text-white font-sans'
-  }
+  },
+  link: [{rel: 'icon', type: 'image/svg+xml', href: faviconHref }]
 })
 
 useSeoMeta({
-  title: 'LinuDev - Un blog sobre programación para novatos',
-  description:
-    'Un blog sobre programación para novatos, javascript, react, rust, bash, y sobre todo linux.',
-  ogTitle: 'LinuDev - Un blog sobre programación para novatos',
-  ogDescription:
-    'Un blog sobre programación para novatos, javascript, react, rust, bash, y sobre todo linux.',
-  twitterCard: 'summary_large_image'
+  title: title,
+  description: description,
+  ogTitle: title,
+  ogDescription: description,
+  twitterTitle: title,
+  twitterDescription: description,
+  twitterCard: 'summary_large_image',
+  lang: 'es',
+  icon: '/favicon.svg'
 })
 
 const links = [{

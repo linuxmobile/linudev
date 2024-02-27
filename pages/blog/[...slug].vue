@@ -1,4 +1,20 @@
 <script setup>
+
+const route = useRoute()
+const article = await queryContent('blog').where({_path: route.path}).findOne();
+
+console.log(article)
+
+useSeoMeta({
+  title: article.title,
+  description: article.description,
+  ogTitle: article.title,
+  ogDescription: article.description,
+  ogType: 'article',
+  twitterTitle: article.title,
+  twitterDescription: article.description
+})
+
 function formatDate(dateString) {
   if (!dateString) return '';
   const date = new Date(dateString);
@@ -8,6 +24,16 @@ function formatDate(dateString) {
     day: 'numeric',
   });
 }
+
+defineOgImageComponent(
+  'BlogPost',
+  {
+    title: article.title,
+    description: article.description,
+    date: formatDate(article.date)
+  }
+)
+
 </script>
 <template>
   <main class="pt-34 px-4 xl:max-w-7xl mx-auto grid grid-cols-1 gap-y-8">

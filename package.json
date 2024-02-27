@@ -18,6 +18,7 @@
     "@nuxt/content": "latest",
     "@nuxt/image": "latest",
     "@nuxtjs/fontaine": "latest",
+    "@nuxtjs/seo": "latest",
     "@types/timeago": "^1.6.3",
     "@unocss/nuxt": "latest",
     "nuxt-delay-hydration": "latest",

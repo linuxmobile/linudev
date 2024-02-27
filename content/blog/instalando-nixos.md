@@ -5,9 +5,6 @@ tags: Linux
 date: 2024-01-26
 ---
 
-<Alert AlertType="info">Este artículo forma parte de un borrador. Puede estar
-incompleto</Alert>
-
 ## Intro
 
 ![](https://i.imgur.com/FmGUopQ.png)
