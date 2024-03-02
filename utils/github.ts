@@ -39,24 +39,24 @@ export const fetchGitHubContributions = defineCachedFunction(
 	async (login: string, apiSecret: string) => {
 		const year = new Date().getFullYear();
 		const query = `
-        query {
-            user(login: "${login}"){
-                name
-                avatarUrl
-                contributionsCollection(from: "${year}-01-01T00:00:00Z", to: "${year}-12-31T23:59:59Z") {
-                    contributionCalendar {
-                        totalContributions
-                        weeks {
-                            contributionDays {
-                                date
-                                contributionCount
-                                contributionLevel
-                            }
-                        }
-                    }
+      query {
+        user(login: "${login}"){
+          name
+          avatarUrl
+          contributionsCollection(from: "${year}-01-01T00:00:00Z", to: "${year}-12-31T23:59:59Z") {
+            contributionCalendar {
+              totalContributions
+              weeks {
+                contributionDays {
+                  date
+                  contributionCount
+                  contributionLevel
                 }
+              }
             }
-        }`;
+          }
+        }
+      }`;
 
 		const response = await fetch("https://api.github.com/graphql", {
 			method: "POST",

@@ -41,7 +41,9 @@ useSeoMeta({
   twitterDescription: description,
   twitterCard: 'summary_large_image',
   lang: 'es',
-  icon: '/favicon.svg'
+  icon: '/favicon.svg',
+  ogImage: '[og:image]',
+  twitterImage: '[twitter:image]'
 })
 
 const links = [{
