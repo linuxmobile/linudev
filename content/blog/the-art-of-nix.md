@@ -35,9 +35,9 @@ Increíble. ¡Ahora te cuento más!
 - Las modificaciones son seguras. Y el cambio entre distintos escritorios (KDE,
   GNOME, Hyprland, LeftWM) es **sencillo**. Sin quilombo.
 
-<Note>Probablemente te pasó alguna vez, que quisiste cambiar de **KDE** a
-**GNOME** pero no sabes que dependencias borrar, que cosas quitar, que cosas
-dejar. Acá es simple y eficaz:</Note>
+Probablemente te pasó alguna vez, que quisiste cambiar de **KDE** a **GNOME**
+pero no sabes que dependencias borrar, que cosas quitar, que cosas dejar. Acá es
+simple y eficaz:
 
 ```nix
 # Reemplazas plasma5 por gnome
