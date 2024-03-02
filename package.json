@@ -17,7 +17,6 @@
   "devDependencies": {
     "@nuxt/content": "latest",
     "@nuxt/image": "latest",
-    "@nuxthq/studio": "latest",
     "@nuxtjs/fontaine": "latest",
     "@nuxtjs/seo": "latest",
     "@types/timeago": "^1.6.3",
