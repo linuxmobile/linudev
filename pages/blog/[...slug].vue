@@ -2,6 +2,11 @@
 const { toc } = useContent()
 const route = useRoute()
 const article = await queryContent('blog').where({_path: route.path}).findOne();
+const allArticles = await queryContent('blog').sort({date: -1}).only(['title', '_path', 'date']).find();
+
+const articleIndex = allArticles.findIndex(a => a._path === route.path);
+const previousArticle = articleIndex > 0 ? allArticles[articleIndex - 1] : null;
+const nextArticle = articleIndex < allArticles.length - 1 ? allArticles[articleIndex + 1] : null;
 
 useSeoMeta({
   title: article.title,
@@ -51,6 +56,14 @@ defineOgImageComponent(
           </li>
         </ul>
       </ContentRenderer>
+      <nav class="grid grid-cols-2 gap-x-12 mt-8">
+        <NuxtLink v-if="previousArticle" :to="`${previousArticle._path}`" class="text-[#ECAB43] hover:underline">
+          ← {{ previousArticle.title }}
+        </NuxtLink>
+        <NuxtLink v-if="nextArticle" :to="`${nextArticle._path}`" class="text-[#ECAB43] hover:underline">
+          {{ nextArticle.title }} →
+        </NuxtLink>
+      </nav>
     </ContentQuery>
   </main>
 </template>

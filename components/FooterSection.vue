@@ -22,8 +22,8 @@ import LogoWhite from '~/icons/logo/Stroke-White.vue'
   		<p class="text-gray-500 w-full text-xs hidden sm:block">© 2023 Stealth Ltd. No Rights Reserved. </p>
   		<LogoWhite class='h-12 w-auto grow' />
   		<div class="w-full hidden sm:flex items-center justify-end gap-x-4">
-  			<a href="https://twitter.com/LinuDev" class="scale-100 transition-all ease-in-out duration-300 hover:scale-110">Twitter ↗︎</a>
-  			<a href="https://www.linkedin.com/in/braiandiez/" class="scale-100 transition-all ease-in-out duration-300 hover:scale-110">LinkedIn ↗︎</a>
+  			<NuxtLink to="https://twitter.com/LinuDev" target="_blank" class="scale-100 transition-all ease-in-out duration-300 hover:scale-110">Twitter ↗︎</NuxtLink>
+  			<NuxtLink to="https://www.linkedin.com/in/braiandiez/" target="_blank" class="scale-100 transition-all ease-in-out duration-300 hover:scale-110">LinkedIn ↗︎</NuxtLink>
   		</div>
   	</section>
   </footer>

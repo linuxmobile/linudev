@@ -60,7 +60,7 @@ const links = [{
 </script>
 <template>
   <NuxtLoadingIndicator />
-  <div>
+  <div class="relative">
     <Noise />
     <header class="fixed w-full py-6 text-lg bg-gradient-to-b from-black via-black/60 to-transparent">
       <nav class="w-full flex-center gap-x-12 md:justify-end md:px-6">
@@ -69,6 +69,7 @@ const links = [{
         </NuxtLink>
       </nav>
     </header>
+    <GoBack/>
   </div>
   <NuxtPage />
   <FooterSection />
