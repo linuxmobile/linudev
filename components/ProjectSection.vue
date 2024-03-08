@@ -1,10 +1,8 @@
 <template>
   <section class="grid gap-y-4">
     <h3 class="text-5xl font-bold font-display max-w-xs lg:text-8xl">Proyectos Seleccionados</h3>
-    <div v-if="isLoading">
-      Cargando proyectos...
-    </div>
     <div class="grid grid-cols-1 gap-3 lg:grid-cols-2">
+      <ProjectLoading v-if="isLoading" />
       <article
         v-if="visibleProjects.length > 0" 
         v-for="project in visibleProjects" 
