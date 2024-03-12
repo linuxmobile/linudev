@@ -65,8 +65,16 @@ export default defineConfig({
 			"gradient-orange": "linear-gradient(90deg, #F8E42E 0%, #FF7D54 100%)",
 		},
 	},
-	safelist: "col-span-4 col-span-5".split(" "),
+	safelist:
+		"col-span-4 col-span-5 alert alert-info alert-warning alert-success alert-error".split(
+			" ",
+		),
 	shortcuts: {
 		"flex-center": "flex items-center justify-center",
+		"alert-success": "bg-astro-green/80 text-black",
+		"alert-info": "bg-astro-blue text-white",
+		"alert-warning": "bg-red-500 text-black",
+		"alert-error": "bg-astro-orange text-black",
+		alert: "flex items-center justify-start rounded-md px-3 gap-x-2 max-w-2xl",
 	},
 });
