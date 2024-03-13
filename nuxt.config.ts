@@ -28,9 +28,6 @@ export default defineNuxtConfig({
 		},
 	},
 	css: ["@unocss/reset/tailwind.css"],
-	delayHydration: {
-		mode: "mount",
-	},
 	devtools: {
 		enabled: true,
 		timeline: {
@@ -42,7 +39,6 @@ export default defineNuxtConfig({
 		"@nuxt/content",
 		"@nuxtjs/fontaine",
 		"@nuxt/image",
-		"nuxt-delay-hydration",
 		"@nuxtjs/seo",
 	],
 	site: {
