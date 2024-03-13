@@ -4,8 +4,8 @@
     <div class="grid grid-cols-1 gap-3 lg:grid-cols-2">
       <ProjectLoading v-if="isLoading" />
       <article
-        v-if="visibleProjects.length > 0" 
-        v-for="project in visibleProjects" 
+        v-if="visibleProjects.length > 0"
+        v-for="project in visibleProjects"
         :key="project.repo"
         class="h-56 flex flex-col items-start justify-between bg-white/5 border border-white/10 px-4 py-3 rounded-lg gap-y-2"
       >
@@ -42,7 +42,7 @@
           </div>
         </footer>
       </article>
-      <div 
+      <div
         v-if="projectInfos.length > 0"
         class="flex items-center justify-between gap-x-4 w-full lg:col-start-2
         [&>button]:rounded-md [&>button]:bg-white/5 [&>button]:px-3 [&>button]:py-1 [&>button]:w-full"
@@ -210,10 +210,6 @@ const PROJECTS = [
   }
 ]
 
-const { data, pending, error } = useAsyncData('repoData', () =>
-  $fetch(`/api/github/${repo}`)
-);
-
 const projectInfos = ref([]);
 
 const currentPage = ref(0);
@@ -255,7 +251,7 @@ async function fetchProjectsInfo() {
   const projectFetchPromises = PROJECTS.map(project =>
     $fetch(`/api/github/${encodeURIComponent(project.repo)}`).then(projectData => ({
       ...project,
-      stars: projectData.stars, 
+      stars: projectData.stars,
       forks: projectData.forks,
       html_url: projectData.html_url,
       created_at: projectData.created_at,

@@ -59,7 +59,7 @@ alert("hola");
 	utilizamos __let__ y __const__.
 </i>
 
-```js/3
+```js
 let message; // Let define la variable "message"
 message = 'Hola mundo'; // la variable "message" muestra 'Hola mundo'
 
@@ -68,7 +68,7 @@ console.log(message); // Con console.log podemos ver en la consola 'Hola mundo'
 
 **Otra forma más óptima de escribir el mismo código es:**
 
-```js/2
+```js
 let message = 'Hola mundo';
 
 console.log(message) // Muestra un "Hola mundo"
@@ -78,12 +78,15 @@ console.log(message) // Muestra un "Hola mundo"
 
 <i>Podemos declarar variables separándolas con una ',':</i>
 
-````js let user = 'linuxin', age = 28, message = 'Hola mundo'; ~~~
+```js
+let user = 'linuxin', age = 28, message = 'Hola mundo';
+```
+
 🔅 Constantes:
 
 <i>Las constantes son variables inmutables.</i>
 
-```js/0/2
+```js
 const myBirthday = '1994-09-08'
 
 myBirthday = '1996-10-22'; // ¡error, no se puede reasignar la constante!
@@ -121,7 +124,7 @@ console.log(isNucbaBoss) // true si se pulsa OK
 	En el siguiente ejemplo, declaramos dos números. 420 cómo 'numberReal' y 520 como 'numberFalse'.
 </i>
 
-```js/5,9
+```js
 let numberReal = 420
 let numberFalse = 520
 
@@ -137,7 +140,7 @@ else{
 
 🔅 Operador ternario '?'
 
-```js/3-7
+```js
 let accessAllowed;
 let age = prompt('¿Qué edad tenés?', '');
 

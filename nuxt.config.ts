@@ -23,6 +23,7 @@ export default defineNuxtConfig({
 				"mdc",
 				"md",
 				"mdx",
+				"html"
 			],
 		},
 	},

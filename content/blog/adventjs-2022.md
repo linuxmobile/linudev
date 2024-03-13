@@ -9,12 +9,10 @@ date: 2023-09-16
 
 ## Intro:
 
-<Note>
 	Del día 1 al 24 de Diciembre del 2022 participé del [AdventJS](https://adventjs.dev/) de @midudev.
 	Aun que es tarde para escribir un "como hice tal tarea". Me sirve para refrescar algunas
 	prácticas, y también para prepararme para el AdventJS del 2023. Acá te comparto como resolví los
 	Ejercicios.
-</Note>
 
 ## Envolver Regalos de Navidad:
 

@@ -9,7 +9,7 @@ Si llegaste hasta acá es porque habrás notado que existe **Hyrpland** o
 **Wayland**. En esta _especie de tutorial_ te voy a enseñar como dejar
 configurado ambos para que se vea así:
 
-![](/img_blog/hyprland.webp)
+<!-- ![](/img_blog/hyprland.webp) -->
 
 ## Instalación de Paquetes y Dependencias
 
