@@ -248,6 +248,17 @@ function sortProjects() {
 }
 
 async function fetchProjectsInfo() {
+
+  const cachedProjects = JSON.parse(sessionStorage.getItem('projectInfos'));
+
+  if (cachedProjects) {
+    projectInfos.value = cachedProjects;
+    sortProjects();
+    updateVisibleProjects();
+    isLoading.value = false;
+    return;
+  }
+
   const projectFetchPromises = PROJECTS.map(project =>
     $fetch(`/api/github/${encodeURIComponent(project.repo)}`).then(projectData => ({
       ...project,
@@ -267,6 +278,9 @@ async function fetchProjectsInfo() {
   sortProjects();
   updateVisibleProjects();
   isLoading.value = false;
+
+  sessionStorage.setItem('projectInfos', JSON.stringify(projectInfos.value));
+  return projectInfos.value;
 }
 
 onMounted(fetchProjectsInfo);
