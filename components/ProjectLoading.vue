@@ -6,7 +6,7 @@
       <div class="bg-gray-700 w-40 h-6 rounded-full"></div>
     </div>
     <div class="flex items-start justify-center flex-col gap-y-2">
-      <div class="bg-gray-700 w-xl h-4 rounded-full"></div>
+      <div class="bg-gray-700 w-md xl:w-xl h-4 rounded-full"></div>
       <div class="bg-gray-700 w-115 h-4 rounded-full"></div>
       <div class="bg-gray-700 w-96 h-4 rounded-full"></div>
     </div>
@@ -20,7 +20,7 @@
       <div class="bg-gray-700 w-40 h-6 rounded-full"></div>
     </div>
     <div class="flex items-start justify-center flex-col gap-y-2">
-      <div class="bg-gray-700 w-xl h-4 rounded-full"></div>
+      <div class="bg-gray-700 w-md xl:w-xl h-4 rounded-full"></div>
       <div class="bg-gray-700 w-115 h-4 rounded-full"></div>
       <div class="bg-gray-700 w-96 h-4 rounded-full"></div>
     </div>
@@ -35,7 +35,7 @@
       <div class="bg-gray-700 w-40 h-6 rounded-full"></div>
     </div>
     <div class="flex items-start justify-center flex-col gap-y-2">
-      <div class="bg-gray-700 w-xl h-4 rounded-full"></div>
+      <div class="bg-gray-700 w-md xl:w-xl h-4 rounded-full"></div>
       <div class="bg-gray-700 w-115 h-4 rounded-full"></div>
       <div class="bg-gray-700 w-96 h-4 rounded-full"></div>
     </div>
@@ -49,7 +49,7 @@
       <div class="bg-gray-700 w-40 h-6 rounded-full"></div>
     </div>
     <div class="flex items-start justify-center flex-col gap-y-2">
-      <div class="bg-gray-700 w-xl h-4 rounded-full"></div>
+      <div class="bg-gray-700 w-md xl:w-xl h-4 rounded-full"></div>
       <div class="bg-gray-700 w-115 h-4 rounded-full"></div>
       <div class="bg-gray-700 w-96 h-4 rounded-full"></div>
     </div>
